@@ -2,7 +2,7 @@
 case "$1" in
   start)
         cd /path/cacique/
-        exec rake jobs:work RAILS_ENV=production > log/rake_jobs.log &
+        exec rake jobs:work RAILS_ENV=production > /dev/NULL &
         pgrep -f jobs:work > /tmp/rake_jobs.pid
   ;;
   stop)
